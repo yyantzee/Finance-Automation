@@ -1,0 +1,72 @@
+---
+import Container from "./Container.astro";
+---
+
+<div class="relative" id="home">
+  <div
+    aria-hidden="true"
+    class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20"
+  >
+    <div class="blur-[106px] h-56 bg-gradient-to-br from-blue-600 to-blue-400">
+    </div>
+    <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300">
+    </div>
+  </div>
+  <Container>
+    <div class="relative pt-36 ml-auto">
+      <div class="lg:w-2/3 text-center mx-auto">
+        <h1 class="text-white font-bold text-5xl md:text-6xl xl:text-7xl">
+          Transforming Your Business, <span
+            class="text-blue-600 dark:text-white">One Smart Step at a Time</span
+          >
+        </h1>
+        <p class="mt-8 text-white">
+          Finance automation revolutionizes financial processes, using AI and ML
+          to eliminate manual tasks, boost productivity, and enhance focus on
+          critical functions like financial planning. Key areas benefiting
+          include AP, AR, spend management, and financial reporting.
+        </p>
+        <div class="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
+          <a
+            href="/documentation"
+            class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-blue-600 before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
+          >
+            <span class="relative text-base font-semibold text-white"
+              >Get started</span
+            >
+          </a>
+          <a
+            href="/more"
+            class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-blue-600/10 before:border-white before:border-transparent before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max"
+          >
+            <span class="relative text-base font-semibold text-white"
+              >Learn more</span
+            >
+          </a>
+        </div>
+        <div
+        class="hidden py-8 mt-16 border-y border-gray-100 dark:border-gray-800 sm:flex justify-between"
+        >
+        <div class="text-left">
+          <div class="flex justify-center">
+            <img src="./images/icons/growth.png" alt="" />
+            </div>
+            <p class="mt-2 text-white">Reduced manual effort</p>
+          </div>
+          <div class="text-center">
+            <div class="flex justify-center">
+              <img src="./images/icons/accuracy.png" alt="" />
+            </div>
+            <p class="mt-2 text-white">Improved accuracy in financial processes</p>
+          </div>
+          <div class="text-right">
+            <div class="flex justify-center">
+              <img src="./images/icons/enhanced.png" alt="" class="w-24" />
+            </div>
+            <p class="mt-2 text-white">Enhanced operational</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Container>
+</div>
