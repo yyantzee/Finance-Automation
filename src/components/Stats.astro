@@ -1,34 +1,146 @@
 ---
 import Container from "./Container.astro";
-
 ---
 
 <div id="solution">
-    <Container>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-sky-500">
-        <path fill-rule="evenodd" d="M2.25 13.5a8.25 8.25 0 018.25-8.25.75.75 0 01.75.75v6.75H18a.75.75 0 01.75.75 8.25 8.25 0 01-16.5 0z" clip-rule="evenodd" />
-        <path fill-rule="evenodd" d="M12.75 3a.75.75 0 01.75-.75 8.25 8.25 0 018.25 8.25.75.75 0 01-.75.75h-7.5a.75.75 0 01-.75-.75V3z" clip-rule="evenodd" />
-      </svg>
-      
-      <div class="space-y-6 justify-between text-gray-600 lg:flex flex-row-reverse md:gap-6 md:space-y-0 lg:gap-12 lg:items-center">
-        <div class="lg:w-1/2 flex justify-center mb-10 lg:flex lg:justify-end">
-          <img
-            src="./images/assets/percentage.png"
-            alt="image"
-            loading="lazy"
-            width=""
-            height=""
-            class="h-40 md:h-52"
-          />
-        </div>
-        <div class="md:7/12 lg:w-1/2 md:mt-10">
-          <h2 class="text-3xl font-bold text-white tracking-wide md:text-4xl">
-            50% of B2B payment activities worldwide will be processed and carried out automatically without manual intervention
-          </h2>
-          <p class="my-8 text-blue-600 dark:text-gray-300">
-            50% of business-to-business invoices worldwide will be processed and paid without manual intervention
-          </p>
-        </div>
+  <Container>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      class="w-6 h-6 text-sky-500"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M2.25 13.5a8.25 8.25 0 018.25-8.25.75.75 0 01.75.75v6.75H18a.75.75 0 01.75.75 8.25 8.25 0 01-16.5 0z"
+        clip-rule="evenodd"></path>
+      <path
+        fill-rule="evenodd"
+        d="M12.75 3a.75.75 0 01.75-.75 8.25 8.25 0 018.25 8.25.75.75 0 01-.75.75h-7.5a.75.75 0 01-.75-.75V3z"
+        clip-rule="evenodd"></path>
+    </svg>
+
+    <div
+      class="space-y-6 justify-between mb-32 text-gray-600 lg:flex flex-row-reverse md:gap-6 md:space-y-0 lg:gap-12 lg:items-center"
+    >
+      <div class="lg:w-1/2 flex justify-center mb-10 lg:flex lg:justify-end">
+        <img
+          src="./images/assets/percentage.png"
+          alt="image"
+          loading="lazy"
+          width=""
+          height=""
+          class="h-40 md:h-52"
+        />
       </div>
-    </Container>
+      <div class="md:7/12 lg:w-1/2 md:mt-10">
+        <h2 class="text-3xl font-bold text-white tracking-wide md:text-4xl">
+          50% of B2B payment activities worldwide will be processed and carried
+          out automatically without manual intervention
+        </h2>
+        <p class="my-8 text-blue-600 dark:text-gray-300">
+          50% of business-to-business invoices worldwide will be processed and
+          paid without manual intervention
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="flex justify-center mb-6 mt-16 md:mb-16 md:mt-36 px-4 py-4 md:px-4 md:py-6 border border-white rounded-full items-center"
+    >
+      <h3 class="text-white font-bold text-center text-2xl md:text-4xl">
+        Why users love Finance Automation
+      </h3>
+    </div>
+    <div class="flex justify-center">
+      <table>
+        <thead>
+          <tr>
+            <td class="border border-white"
+              ><h3 class="text-white text-lg md:text-4xl py-4 px-4">
+                Features
+              </h3>
+            </td>
+            <td class="border border-white flex justify-center items-center"
+              ><img
+                src="./images/clients/logo.svg"
+                alt=""
+                class="w-40 h-40 md:w-16 px-4 py-4"
+              /><h3 class="hidden md:flex text-white text-lg md:text-4xl py-4 pr-4">
+                Finance Automation
+              </h3>
+            </td>
+            <td class="border border-white"
+              ><h3 class="text-white text-lg md:text-4xl py-4 px-4">
+                Traditional OCR
+              </h3>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border border-white"
+              ><h3 class="text-white text-sm md:text-4xl py-4 px-4">
+                Data Formatting
+              </h3>
+            </td>
+            <td class="border border-white"
+              ><span
+                class="material-symbols-outlined text-green-600 text-lg md:text-6xl py-4 flex justify-center"
+              >
+                done
+              </span>
+            </td>
+            <td class="border border-white"><span class="material-symbols-outlined text-red-600 text-lg md:text-6xl py-4 flex justify-center"> close</span></td>
+          </tr>
+          <tr>
+            <td class="border border-white"
+              ><h3 class="text-white text-sm md:text-4xl py-4 px-4">
+                Self-learning AI
+              </h3>
+            </td>
+            <td class="border border-white"
+              ><span
+                class="material-symbols-outlined text-green-600 text-lg md:text-6xl py-4 flex justify-center"
+              >
+                done
+              </span>
+            </td>
+            <td class="border border-white"><span class="material-symbols-outlined text-red-600 text-lg md:text-6xl py-4 flex justify-center"> close</span></td>
+          </tr>
+          <tr>
+            <td class="border border-white"
+              ><h3 class="text-white text-sm md:text-4xl py-4 px-4">
+                Cost and Time Savings
+              </h3>
+            </td>
+            <td class="border border-white"
+              ><span
+                class="material-symbols-outlined text-green-600 text-lg md:text-6xl py-4 flex justify-center"
+              >
+                done
+              </span>
+            </td>
+            <td class="border border-white"><span class="material-symbols-outlined text-red-600 text-lg md:text-6xl py-4 flex justify-center"> close</span></td>
+          </tr>
+          <tr>
+            <td class="border border-white"
+              ><h3 class="text-white text-sm md:text-4xl py-4 px-4">
+                Amount of training data needed
+              </h3>
+            </td>
+            <td class="border border-white"
+              >
+              <span class="material-symbols-outlined text-red-600 text-lg md:text-6xl py-4 flex justify-center"> close</span>
+            </td>
+            <td class="border border-white"><span
+              class="material-symbols-outlined text-green-600 text-lg md:text-6xl py-4 flex justify-center"
+            >
+              done
+            </span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </Container>
 </div>
