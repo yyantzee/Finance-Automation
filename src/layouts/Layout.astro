@@ -8,13 +8,22 @@ import Loading from "../components/Loading.astro";
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="./favicon.png" />
-		<meta name="generator" content={Astro.generator} />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta
 			name="description"
-			content="Template built with tailwindcss using Tailus blocks v2"
+			content="Discover the transformative power of finance automation, leveraging cutting-edge AI and ML technologies to streamline financial operations. From Accounts Payable (AP) and Accounts Receivable (AR) to spend management and financial reporting, unlock efficiency, productivity, and precision in your financial processes. Embrace the revolution and elevate your focus on crucial functions like financial planning for sustainable growth."
 		/>
+		<meta
+			name="keywords"
+			content="finance automation, finance technology, financial automation, automation in finance, fintech, financial processes, financial efficiency, finance solutions, finance analyst"
+		/>
+		<meta
+			name="author"
+			content="Finance Automation - Information Technology"
+		/>
+		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/x-icon" href="./favicon.png" />
+		<link rel="icon" type="image/x-icon" href="../favicon.png" />
 		<title>
 			Finance Automation - Transforming Your Business, One Smart Step at a
 			Time
@@ -28,26 +37,30 @@ import Loading from "../components/Loading.astro";
 			rel="stylesheet"
 			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
 		/>
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-		/>
-		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+		<style>
+			html {
+				font-family: Urbanist, sans-serif;
+				scroll-behavior: smooth;
+			}
+
+			body {
+				margin: 0;
+			}
+		</style>
 	</head>
 	<body class="bg-black">
-		<Loading></Loading>
+		<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+		<script>
+			import AOS from "aos";
+			import "aos/dist/aos.css"; // You can also use <link> for styles
+			
+			// ..
+			AOS.init();
+		</script>
+		<Loading />
 		<AppHeader />
 		<slot />
 		<AppFooter />
 	</body>
 </html>
-<style>
-	html {
-		font-family: Urbanist, sans-serif;
-		scroll-behavior: smooth;
-	}
-
-	body {
-		margin: 0;
-	}
-</style>

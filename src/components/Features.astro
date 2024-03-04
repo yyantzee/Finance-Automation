@@ -1,216 +1,195 @@
 ---
 import Container from "./Container.astro";
+// ..
 ---
-
 <div id="features">
-  <Container>
-    <div class="md:w-full bg-white rounded-xl px-6 py-4">
-      <img src="./images/assets/automation.gif" alt="" />
-      <h2 class="my-8 text-2xl font-bold text-black relative md:text-4xl">
-        Account Payable Automation
-      </h2>
-      <div class="md:flex">
-        <p class="text-black text-xl tracking-wide mb-20">
-          With AP automation software or accounts payable software, you can
-          digitize invoices and automatically match to purchase orders, thereby
-          minimizing the need for manual checks or interventions. Invoice
-          automation and AP approval workflows can also be streamlined, ensuring
-          prompt payments and reducing the likelihood of late fees or penalties.
-          With real-time visibility into outstanding invoices, finance teams can
-          more effectively manage cash flow and make better decisions concerning
-          working capital. There are various steps in the source to pay workflow
-          that can be further automated.
-        </p>
-        <img
-          src="./images/assets/approcess.png"
-          alt=""
-          class="md:h-96 lg:-mt-20 mb-4"
-        />
-      </div>
-      <a
-            href="/apautomation"
-            class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:border before:border-black before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max"
-          >
-            <span class="relative text-base font-semibold text-black"
-              >Learn more</span
+    <Container>
+        <div
+            data-aos="fade-up"
+            data-aos-duration="500"
+            class="md:w-full bg-white rounded-xl px-6 py-4"
+        >
+            <img src="./images/assets/automation.gif" alt="" />
+            <h2 class="my-8 text-2xl font-bold text-black relative md:text-4xl">
+                Account Payable Automation
+            </h2>
+            <div class="md:flex">
+                <p class="text-black text-xl tracking-wide mb-20">
+                    With AP automation software or accounts payable software,
+                    you can digitize invoices and automatically match to
+                    purchase orders, thereby minimizing the need for manual
+                    checks or interventions. Invoice automation and AP approval
+                    workflows can also be streamlined, ensuring prompt payments
+                    and reducing the likelihood of late fees or penalties. With
+                    real-time visibility into outstanding invoices, finance
+                    teams can more effectively manage cash flow and make better
+                    decisions concerning working capital. There are various
+                    steps in the source to pay workflow that can be further
+                    automated.
+                </p>
+                <img
+                    src="./images/assets/approcess.png"
+                    alt="accounts payable process"
+                    class="w-full h-max md:w-full md:h-96 lg:-mt-20 mb-4"
+                />
+            </div>
+            <a
+                href="/apautomation"
+                class="relative mb-4 flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:border before:border-black before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
             >
-          </a>
-    </div>
-    <div class="flex justify-center mb-6 mt-16 md:mb-16 md:mt-36">
-      <h3
-        class="text-white font-bold text-center text-2xl md:text-4xl px-4 py-4 md:px-10 md:py-6 border-2 border-blue-600 rounded-full"
-      >
-        4 Way Matching
-      </h3>
-    </div>
-    <div class="md:flex md:justify-around mb-20">
-      <div class="flex justify-center">
-          <div
-              class="w-max h-max flex justify-center items-center mb-6"
-          >
-              <div
-                  class="w-52 h-52 md:w-28 md:h-28 lg:w-40 lg:h-40 border-2 border-blue-600 rounded-full"
-              >
-              </div>
-              <img
-                  src="./images/assets/po.png"
-                  alt=""
-                  class="w-40 md:w-24 lg:w-32 absolute"
-              />
-          </div>
-      </div>
-      <h3
-          class="font-semibold md:hidden text-white mb-10 text-center"
-      >
-          01. <span class="text-blue-600 font-bold"
-              >Purchasing Order</span
-          >
-      </h3>
-
-      <div class="flex justify-center">
-          <div
-              class="w-max h-max flex justify-center items-center mb-6"
-          >
-              <div
-                  class="w-52 h-52 md:w-28 md:h-28 lg:w-40 lg:h-40 border-2 border-blue-600 rounded-full"
-              >
-              </div>
-              <img
-                  src="./images/assets/do.jpg"
-                  alt=""
-                  class="w-40 md:w-24 lg:w-32 absolute"
-              />
-          </div>
-      </div>
-      <h3
-          class="font-semibold md:hidden text-white mb-10 text-center"
-      >
-          02. <span class="text-blue-600 font-bold"
-              >Delivery Order</span
-          >
-      </h3>
-      <div class="flex justify-center">
-          <div
-              class="w-max h-max flex justify-center items-center mb-6"
-          >
-              <div
-                  class="w-52 h-52 md:w-28 md:h-28 lg:w-40 lg:h-40 border-2 border-blue-600 rounded-full"
-              >
-              </div>
-              <img
-                  src="./images/assets/invoice.png"
-                  alt=""
-                  class="w-40 md:w-24 lg:w-32 absolute"
-              />
-          </div>
-      </div>
-      <h3
-          class="font-semibold md:hidden text-white mb-10 text-center"
-      >
-          03. <span class="text-blue-600 font-bold"
-              >Invoice</span
-          >
-      </h3>
-      <div class="flex justify-center">
-          <div
-              class="w-max h-max flex justify-center items-center mb-6"
-          >
-              <div
-                  class="w-52 h-52 md:w-28 md:h-28 lg:w-40 lg:h-40 border-2 border-blue-600 rounded-full"
-              >
-              </div>
-              <img
-                  src="./images/assets/form-faktur-pajak-2013.jpg"
-                  alt=""
-                  class="w-40 md:w-24 lg:w-32 absolute"
-              />
-          </div>
-      </div>
-      <h3
-          class="font-semibold md:hidden text-white mb-10 text-center"
-      >
-          04. <span class="text-blue-600 font-bold"
-              >Tax Invoice</span
-          >
-      </h3>
-      <div class="flex justify-center">
-          <div
-              class="w-max h-max flex justify-center items-center mb-6"
-          >
-              <div
-                  class="w-52 h-52 md:w-28 md:h-28 lg:w-40 lg:h-40 border-2 border-blue-600 rounded-full"
-              >
-              </div>
-              <img
-                  class="w-28 absolute md:w-20"
-                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAADh0lEQVR4nO2bTUtVQRjHr5KFErmIIkiK6EVt3aZF4LKXVbZVI7IMCyvD6rY6i0h7+QJCtYo2ZiZFEAVS+SEyMOgTVKvsRX/xwGjTeO517jlzzsyl84MDl3vnPjPP/zznmZln7i0BjUAvcM24LgAbSwZAKzAU097nJeNvLCUB6KMy4zHtHxImvUkFiGoUYIYwiVwIMAuMqes80LKGAI+19i4usbfMZ4v2s64FiCza6wJ0Jeq0su0uzfaM67E7MUIhAHoEjDvO5uP1FgFZEqwAD8iH+6EK0AoMO87+5nUZ2BSkACFRCEARAVHxCPylyAElb4nEE0UOoMgBUZEDQsgBwAngG8n4CnTXuwAvSMfzehegW93JJHwBjvsae6mYBinWAVHqMPJE8QhQ5ICzWvQO+AsjTwBNWkG16b8TwAkUAlA3EQDsAI6pk2v9FPuofJapAMDBDI615Zh92xrj2w/cAz5ZrCrngbtAp1MBgF3AT7LhTYU+24FnwFICm/KdKWCfKwF2Ar/IhldGX/KDjTKw4MD2goq0hlQCCMAh4KbjA5CrwFatjxbZGeKe6bij/qBmAeX8e7LjXawIBCCACvss7nxcJDSGKECZ/LgWlADAXkcJz5YfMsPUJACwQaarhFOSOU+3G7ZlqsubyVoFOOCw8xvGIietqJX4XeWzRaCjFgHWAy/XMGrDHLBbsysrPNeIoBdVYtW3yyZj1gJkheXythbkzp7R7K+rctM+ehVAbWxcO99v9CGRUI02nwLIrs5l2J8z7PcrUapx2KcAso214YOcG6hleFzCFCdPGbYHLJPrYJ7b4dPyTCZY/KwcmsiADcfE+ZMJnRfKeW+HryQQ4JYxliHloCS3vhTOC+W8t8PDmk35MbYNS2bFF7gE9KR0XhjMczvcbzwCtSTBVSI4cF44Uk/TYKwIKZwXtvteCM2nESGl83PLRnwKcCfBwMXhR+rPFWn2EaMhCNCZ4WaoGosru1L81wOkeps3E/oAogAKIt9zdH7hn3I5YZTEZKWYFyNm51EAAjSqgmXWTK06IyAAAbSyuJSus+It0BzXcRSCAJoI0xnd+eZKnUZaw9ce/vcrRYvN2nga1PsuKsWSXEdqORrzxZMKs8OkRVEjDvnOBLDHJux68c/TKuPrAG5LDc+y6Dpqlt5tMnBPxv8Cq3ZdB7ZYjrVNyliqMLL8CMlrea/N2mmNPz9GqucycGvhAAAAAElFTkSuQmCC"
-              />
-          </div>
-      </div>
-      <h3
-          class="font-semibold md:hidden text-white mb-10 text-center"
-      >
-          05. <span class="text-blue-600 font-bold"
-              >Validate</span
-          >
-      </h3>
-  </div>
-  <div class="md:flex hidden lg:justify-around">
-      <h3
-          class="font-semibold text-sm text-blue-600 mb-10 pr-4 lg:pr-0 lg:text-xl lg:-ml-10"
-      >
-          01. <span class="text-white font-bold"
-              >Purchasing Order</span
-          >
-      </h3>
-      <h3
-          class="font-semibold text-sm text-blue-600 mb-10 pr-10 lg:pr-0 lg:text-lg lg:-ml-20"
-      >
-          02. <span class="text-white font-bold"
-              >Delivery Order</span
-          >
-      </h3>
-      <h3
-          class="font-semibold text-sm text-blue-600 mb-10 pr-16 lg:pr-0 lg:text-lg lg:-ml-20"
-      >
-          03. <span class="text-white font-bold">Invoice</span>
-      </h3>
-      <h3
-          class="font-semibold text-sm text-blue-600 mb-10 pr-12 lg:pr-0 lg:text-lg lg:-ml-10"
-      >
-          04. <span class="text-white font-bold">Tax Invoice</span
-          >
-      </h3>
-      <h3
-          class="font-semibold text-sm text-blue-600 mb-10 lg:pr-0 lg:text-lg lg:-ml-6"
-      >
-          05. <span class="text-white font-bold">Validate</span>
-      </h3>
-  </div>
-
-    <div
-      class="flex justify-center mb-6 mt-16 md:mb-16 md:mt-36 px-4 py-4 md:px-4 md:py-6 border border-white rounded-full items-center"
-    >
-      <h3
-        class="text-white font-bold text-center text-2xl md:text-4xl"
-      >
-        Automate with AI
-      </h3>
-    </div>
-    <h1
-                class="text-white font-normal text-center text-lg md:text-xl xl:text-xl mb-10 tracking-wide"
+                <span class="relative text-base font-semibold text-black"
+                    >About AP Automation</span
+                >
+            </a>
+        </div>
+        <div data-aos="fade-up"
+        data-aos-duration="500" class="flex justify-center mb-14 mt-16 md:mb-16 md:mt-36">
+            <h3
+                class="text-white font-bold text-center text-2xl md:text-4xl px-4 py-4 md:px-10 md:py-6 border-2 border-blue-600 rounded-full"
             >
-                With AP automation software or accounts payable software, you
-                can digitize invoices and automatically match to purchase
-                orders, thereby minimizing the need for manual checks or
-                interventions. Invoice automation and AP approval workflows can
-                also be streamlined, ensuring prompt payments and reducing the
-                likelihood of late fees or penalties. With real-time visibility
-                into outstanding invoices, finance teams can more effectively
-                manage cash flow and make better decisions concerning working
-                capital. There are various steps in the source to pay workflow
-                that can be further automated.
-            </h1>
-            <img src="./images/assets/clai.gif" alt="" class="rounded-2xl">
-  </Container>
+                4 Way Matching
+            </h3>
+        </div>
+        <div class="md:flex md:justify-around mb-20">
+            <div data-aos="fade-up"
+        data-aos-duration="700" class="flex justify-center">
+                <div class="w-max h-max flex justify-center items-center mb-6">
+                    <div
+                        class="w-52 h-52 md:w-28 md:h-28 lg:w-40 lg:h-40 border-2 border-blue-600 rounded-full"
+                    >
+                    </div>
+                    <img
+                        src="./images/assets/po.png"
+                        alt="pre order documents"
+                        class="w-40 h-max md:w-24 lg:w-32 absolute"
+                    />
+                </div>
+            </div>
+            <h3 class="font-semibold md:hidden text-white mb-10 text-center">
+                01. <span class="text-blue-600 font-bold">Purchasing Order</span
+                >
+            </h3>
+
+            <div data-aos="fade-up"
+        data-aos-duration="700" class="flex justify-center">
+                <div class="w-max h-max flex justify-center items-center mb-6">
+                    <div
+                        class="w-52 h-52 md:w-28 md:h-28 lg:w-40 lg:h-40 border-2 border-blue-600 rounded-full"
+                    >
+                    </div>
+                    <img
+                        src="./images/assets/do.jpg"
+                        alt="delivery order documents"
+                        class="w-40 h-max md:w-24 lg:w-32 absolute"
+                    />
+                </div>
+            </div>
+            <h3 class="font-semibold md:hidden text-white mb-10 text-center">
+                02. <span class="text-blue-600 font-bold">Delivery Order</span>
+            </h3>
+            <div data-aos="fade-up"
+        data-aos-duration="700" class="flex justify-center">
+                <div class="w-max h-max flex justify-center items-center mb-6">
+                    <div
+                        class="w-52 h-52 md:w-28 md:h-28 lg:w-40 lg:h-40 border-2 border-blue-600 rounded-full"
+                    >
+                    </div>
+                    <img
+                        src="./images/assets/invoice.png"
+                        alt="invoice documents"
+                        class="w-40 h-max md:w-24 lg:w-32 absolute"
+                    />
+                </div>
+            </div>
+            <h3 class="font-semibold md:hidden text-white mb-10 text-center">
+                03. <span class="text-blue-600 font-bold">Invoice</span>
+            </h3>
+            <div data-aos="fade-up"
+        data-aos-duration="700" class="flex justify-center">
+                <div class="w-max h-max flex justify-center items-center mb-6">
+                    <div
+                        class="w-52 h-52 md:w-28 md:h-28 lg:w-40 lg:h-40 border-2 border-blue-600 rounded-full"
+                    >
+                    </div>
+                    <img
+                        src="./images/assets/form-faktur-pajak-2013.jpg"
+                        alt="tax invoice documents"
+                        class="w-40 h-max md:w-24 lg:w-32 absolute"
+                    />
+                </div>
+            </div>
+            <h3 class="font-semibold md:hidden text-white mb-10 text-center">
+                04. <span class="text-blue-600 font-bold">Tax Invoice</span>
+            </h3>
+            <div data-aos="fade-up"
+        data-aos-duration="700" class="flex justify-center">
+                <div class="w-max h-max flex justify-center items-center mb-6">
+                    <div
+                        class="w-52 h-52 md:w-28 md:h-28 lg:w-40 lg:h-40 border-2 border-blue-600 rounded-full"
+                    >
+                    </div>
+                    <img
+                        class="w-28 absolute md:w-20"
+                        alt="validate all documents"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAADh0lEQVR4nO2bTUtVQRjHr5KFErmIIkiK6EVt3aZF4LKXVbZVI7IMCyvD6rY6i0h7+QJCtYo2ZiZFEAVS+SEyMOgTVKvsRX/xwGjTeO517jlzzsyl84MDl3vnPjPP/zznmZln7i0BjUAvcM24LgAbSwZAKzAU097nJeNvLCUB6KMy4zHtHxImvUkFiGoUYIYwiVwIMAuMqes80LKGAI+19i4usbfMZ4v2s64FiCza6wJ0Jeq0su0uzfaM67E7MUIhAHoEjDvO5uP1FgFZEqwAD8iH+6EK0AoMO87+5nUZ2BSkACFRCEARAVHxCPylyAElb4nEE0UOoMgBUZEDQsgBwAngG8n4CnTXuwAvSMfzehegW93JJHwBjvsae6mYBinWAVHqMPJE8QhQ5ICzWvQO+AsjTwBNWkG16b8TwAkUAlA3EQDsAI6pk2v9FPuofJapAMDBDI615Zh92xrj2w/cAz5ZrCrngbtAp1MBgF3AT7LhTYU+24FnwFICm/KdKWCfKwF2Ar/IhldGX/KDjTKw4MD2goq0hlQCCMAh4KbjA5CrwFatjxbZGeKe6bij/qBmAeX8e7LjXawIBCCACvss7nxcJDSGKECZ/LgWlADAXkcJz5YfMsPUJACwQaarhFOSOU+3G7ZlqsubyVoFOOCw8xvGIietqJX4XeWzRaCjFgHWAy/XMGrDHLBbsysrPNeIoBdVYtW3yyZj1gJkheXythbkzp7R7K+rctM+ehVAbWxcO99v9CGRUI02nwLIrs5l2J8z7PcrUapx2KcAso214YOcG6hleFzCFCdPGbYHLJPrYJ7b4dPyTCZY/KwcmsiADcfE+ZMJnRfKeW+HryQQ4JYxliHloCS3vhTOC+W8t8PDmk35MbYNS2bFF7gE9KR0XhjMczvcbzwCtSTBVSI4cF44Uk/TYKwIKZwXtvteCM2nESGl83PLRnwKcCfBwMXhR+rPFWn2EaMhCNCZ4WaoGosru1L81wOkeps3E/oAogAKIt9zdH7hn3I5YZTEZKWYFyNm51EAAjSqgmXWTK06IyAAAbSyuJSus+It0BzXcRSCAJoI0xnd+eZKnUZaw9ce/vcrRYvN2nga1PsuKsWSXEdqORrzxZMKs8OkRVEjDvnOBLDHJux68c/TKuPrAG5LDc+y6Dpqlt5tMnBPxv8Cq3ZdB7ZYjrVNyliqMLL8CMlrea/N2mmNPz9GqucycGvhAAAAAElFTkSuQmCC"
+                    />
+                </div>
+            </div>
+            <h3 class="font-semibold md:hidden text-white mb-10 text-center">
+                05. <span class="text-blue-600 font-bold">Validate</span>
+            </h3>
+        </div>
+        <div class="md:flex hidden lg:justify-around">
+            <h3
+                class="font-semibold text-sm text-blue-600 mb-10 pr-4 lg:pr-0 lg:text-xl lg:-ml-10"
+            >
+                01. <span class="text-white font-bold">Purchasing Order</span>
+            </h3>
+            <h3
+                class="font-semibold text-sm text-blue-600 mb-10 pr-10 lg:pr-0 lg:text-lg lg:-ml-20"
+            >
+                02. <span class="text-white font-bold">Delivery Order</span>
+            </h3>
+            <h3
+                class="font-semibold text-sm text-blue-600 mb-10 pr-16 lg:pr-0 lg:text-lg lg:-ml-20"
+            >
+                03. <span class="text-white font-bold">Invoice</span>
+            </h3>
+            <h3
+                class="font-semibold text-sm text-blue-600 mb-10 pr-12 lg:pr-0 lg:text-lg lg:-ml-10"
+            >
+                04. <span class="text-white font-bold">Tax Invoice</span>
+            </h3>
+            <h3
+                class="font-semibold text-sm text-blue-600 mb-10 lg:pr-0 lg:text-lg lg:-ml-6"
+            >
+                05. <span class="text-white font-bold">Validate</span>
+            </h3>
+        </div>
+
+        <div
+        data-aos="fade-up"
+        data-aos-duration="500" class="flex justify-center mb-6 mt-16 md:mb-16 md:mt-36 px-4 py-4 md:px-4 md:py-6 border border-white rounded-full items-center"
+        >
+            <h3 class="text-white font-bold text-center text-2xl md:text-4xl">
+                Automate with AI
+            </h3>
+        </div>
+        <h1
+        data-aos="fade-up"
+        data-aos-duration="700" class="text-white font-normal text-center text-lg md:text-xl xl:text-xl mb-20 tracking-wide"
+        >
+            With AP automation software or accounts payable software, you can
+            digitize invoices and automatically match to purchase orders,
+            thereby minimizing the need for manual checks or interventions.
+            Invoice automation and AP approval workflows can also be
+            streamlined, ensuring prompt payments and reducing the likelihood of
+            late fees or penalties. With real-time visibility into outstanding
+            invoices, finance teams can more effectively manage cash flow and
+            make better decisions concerning working capital. There are various
+            steps in the source to pay workflow that can be further automated.
+        </h1>
+        <img data-aos="fade-up"
+        data-aos-duration="500" src="./images/assets/clai.gif" alt="ai learning documents" loading="lazy" class="rounded-2xl w-full h-[30rem] object-cover" />
+    </Container>
 </div>

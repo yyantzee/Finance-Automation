@@ -1,0 +1,94 @@
+<div class="swiper mb-10">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide text-white"><img src="../images/assets/capture.gif" alt="capture with ai" class="rounded-2xl" loading="lazy"></div>
+        <div class="swiper-slide text-white"><img src="../images/assets/clai.gif" alt="processing document with ai" class="rounded-2xl" loading="lazy"></div>
+        <div class="swiper-slide text-white"><img src="../images/assets/workflow.gif" alt="upload documents easy" class="rounded-2xl" loading="lazy"></div>
+        <!-- Add more slides as needed -->
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+
+
+<script is:inline>
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+
+        autoplay: {
+          delay: 3000, // Delay antara perpindahan slide (dalam milidetik)
+          disableOnInteraction: false, // Tetapkan false agar autoplay tidak dihentikan setelah interaksi pengguna (default true)
+      },
+
+        // Effect
+        effect: 'coverflow',
+        coverflowEffect: {
+            rotate: 0, // No rotation
+            depth: 200, // Depth of the effect
+            modifier: 1, // Effect multiplier, allow to change intensity of the effect
+        },
+
+        // Limit number of slides visible in the swiper
+        slidesPerView: 2,
+        spaceBetween: 30,
+
+        // Highlight current slide
+        centeredSlides: true,
+        slideToClickedSlide: true,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+
+    // Check screen width and adjust slides per view accordingly
+    const setSlidesPerView = () => {
+        swiper.params.slidesPerView = window.innerWidth < 768 ? 1.2 : 2;
+        swiper.update();
+    };
+
+    // Set initial slides per view
+    setSlidesPerView();
+
+    // Update slides per view when window resizes
+    window.addEventListener('resize', setSlidesPerView);
+</script>
+
+<style>
+    .swiper-slide {
+        overflow: hidden; /* Mengatur overflow untuk menghindari gambar blur meluas ke luar slide */
+    }
+    .swiper-slide img {
+        transition: filter 0.3s ease; /* Animasi efek blur */
+    }
+    .swiper-slide:not(.swiper-slide-active) img {
+        filter: blur(5px); /* Blur gambar pada slide yang tidak aktif */
+    }
+
+    /* Adjust slides per view based on screen width */
+    @media screen and (max-width: 767px) {
+        .swiper-container {
+            width: calc(100% + 20px);
+            margin-left: -10px;
+        }
+    }
+</style>

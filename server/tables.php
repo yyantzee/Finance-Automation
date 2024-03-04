@@ -2,6 +2,7 @@
 include 'config.php';
 
 session_start();
+$page = 'Inbox';
 
 // Cek apakah pengguna sudah login, jika tidak, redirect ke halaman login
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
@@ -21,7 +22,7 @@ $sql1 = "SELECT * FROM user WHERE id_user = '$id'";
 $result1 = $conn->query($sql1);
 $row1 = $result1->fetch_assoc();
 
-$sql = "SELECT * FROM contact_form"; // Ganti 'nama_tabel' dengan nama tabel yang sesuai
+$sql = "SELECT * FROM contact_form  WHERE status = 'UNRESOLVED'"; // Ganti 'nama_tabel' dengan nama tabel yang sesuai
 
 $result = $conn->query($sql);
 ?>
@@ -59,84 +60,7 @@ $result = $conn->query($sql);
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-black sidebar sidebar-dark accordion" id="accordionSidebar">
-
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon">
-                    <img src="logo.svg" alt="" class="h-10">
-                </div>
-                <div class="sidebar-brand-text mx-2 text-xl">Admin</div>
-            </a>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link" href="index.php">
-                    <i class="fas fa-chart-line"></i>
-                    <span>Dashboard</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Menu
-            </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item active">
-                <a class="nav-link collapsed" href="tables.html">
-                    <i class="fas fa-envelope"></i>
-                    <span>Mail</span>
-                </a>
-            </li>
-
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#">
-                    <i class="fas fa-user-tie"></i>
-                    <span>Carrer</span>
-                    <span class=" bg-white text-black px-2 rounded-lg font-bold">Coming Soon</span>
-                </a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                ACCOUNT
-            </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="setting.php">
-                    <i class="fas fa-cog"></i>
-                    <span>Account Setting</span>
-                </a>
-
-            <!-- Nav Item - Charts -->
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="logout.php">
-                    <i class="fas fa-sign-out-alt"></i>
-                    <span>Logout</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-
-        </ul>
+        <?php include 'sidebar.php'; ?>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -193,41 +117,42 @@ $result = $conn->query($sql);
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Mail</h1>
-                    <p class="mb-4">Create By DataTables is a third party plugin that is used to generate the demo table below.
-                        For more information about DataTables, please visit the <a target="_blank"
-                            href="https://datatables.net">official DataTables documentation</a>.</p>
+                    <a href="tables.php"><button type="button" class="btn bg-blue-600 hover:bg-blue-700 text-white mb-4">Refresh</button></a>
+                    <a href="#" data-toggle="modal" data-target="#deleteallModal"><button type="button" class="btn bg-green-600 hover:bg-green-700 mb-4 ml-2 text-white"><span class="mr-1"><i class="fas fa-check"></i></i></span>Resolve All</button></a>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Inbox</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
+                                            <th>No</th>
                                             <th>First Name</th>
                                             <th>Last Name</th>
                                             <th>Company</th>
                                             <th>Email</th>
                                             <th>Phone Number</th>
                                             <th>Message</th>
-                                            <th>Message</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php while($row = $result->fetch_assoc()) { ?>
+                                        <?php $number = 1; while($row = $result->fetch_assoc()) { ?>
                                         <tr>
+                                            <td><?php echo $number ?></td>
                                             <td><?php echo $row["first_name"] ?></td>
                                             <td><?php echo $row["last_name"] ?></td>
                                             <td><?php echo $row["company"] ?></td>
                                             <td><?php echo $row["email"] ?></td>
                                             <td><?php echo $row["phone_number"] ?></td>
                                             <td><?php echo $row["message"] ?></td>
-                                            <td><a href="details.php?id=<?php echo $row['id']; ?>"><button type="button" class="btn bg-blue-500 w-full text-white"><span class="mr-1"><i class="fas fa-eye"></i></span>VIEW</button></a></td>
+                                            <td class="flex gap-2"><a href="details.php?id=<?php echo $row['id_contact']; ?>"><button type="button" class="btn bg-blue-600 hover:bg-blue-700 w-full text-white"><span class="mr-1"><i class="fas fa-eye"></i></span>VIEW</button></a> <a href="delete.php?id=<?php echo $row['id_contact']; ?>"><button type="button" class="btn bg-green-600 hover:bg-green-700 w-full text-white"><span class="mr-1"><i class="fas fa-check"></i></i></span>Solve</button></a></td>
                                         </tr>
-                                        <?php  } ?>
+                                        <?php $number++;  } ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -244,7 +169,7 @@ $result = $conn->query($sql);
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Copyright &copy; Finance Automation</span>
                     </div>
                 </div>
             </footer>
@@ -275,7 +200,26 @@ $result = $conn->query($sql);
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary text-black" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-danger" href="login.html">Logout</a>
+                    <a class="btn btn-danger" href="logout.php">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteallModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Are you sure to resolve all?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Yes" below if you are ready to resolve all</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary text-black" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-danger" href="deleteall.php">Yes</a>
                 </div>
             </div>
         </div>
