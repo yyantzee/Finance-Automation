@@ -1,5 +1,6 @@
 ---
 import Container from "./Container.astro";
+import Slider from "./SliderForHome.astro";
 // ..
 ---
 <div id="features">
@@ -61,7 +62,7 @@ import Container from "./Container.astro";
                     <img
                         src="./images/assets/po.png"
                         alt="pre order documents"
-                        class="w-40 h-max md:w-24 lg:w-32 absolute"
+                        class="w-40 md:w-24 lg:w-32 absolute"
                     />
                 </div>
             </div>
@@ -80,7 +81,7 @@ import Container from "./Container.astro";
                     <img
                         src="./images/assets/do.jpg"
                         alt="delivery order documents"
-                        class="w-40 h-max md:w-24 lg:w-32 absolute"
+                        class="w-40 md:w-24 lg:w-32 absolute"
                     />
                 </div>
             </div>
@@ -97,7 +98,7 @@ import Container from "./Container.astro";
                     <img
                         src="./images/assets/invoice.png"
                         alt="invoice documents"
-                        class="w-40 h-max md:w-24 lg:w-32 absolute"
+                        class="w-40 md:w-24 lg:w-32 absolute"
                     />
                 </div>
             </div>
@@ -114,7 +115,7 @@ import Container from "./Container.astro";
                     <img
                         src="./images/assets/form-faktur-pajak-2013.jpg"
                         alt="tax invoice documents"
-                        class="w-40 h-max md:w-24 lg:w-32 absolute"
+                        class="w-40 md:w-24 lg:w-32 absolute"
                     />
                 </div>
             </div>
@@ -189,7 +190,6 @@ import Container from "./Container.astro";
             make better decisions concerning working capital. There are various
             steps in the source to pay workflow that can be further automated.
         </h1>
-        <img data-aos="fade-up"
-        data-aos-duration="500" src="./images/assets/clai.gif" alt="ai learning documents" loading="lazy" class="rounded-2xl w-full h-[30rem] object-cover" />
+        <Slider></Slider>
     </Container>
 </div>

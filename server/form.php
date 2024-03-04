@@ -8,8 +8,7 @@
   <meta name="generator" content={Astro.generator} />
   <meta name="description" content="Template built with tailwindcss using Tailus blocks v2" />
   <title>
-    Finance Automation - Transforming Your Business, One Smart Step at a
-    Time
+    Finance Automation - Contact Us
   </title>
 
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet" />

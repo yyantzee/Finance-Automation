@@ -2,6 +2,8 @@
 import AppFooter from "../components/AppFooter.astro";
 import AppHeader from "../components/AppHeader.astro";
 import Loading from "../components/Loading.astro";
+
+const { title } = Astro.props
 ---
 
 <!DOCTYPE html>
@@ -25,8 +27,7 @@ import Loading from "../components/Loading.astro";
 		<link rel="icon" type="image/x-icon" href="./favicon.png" />
 		<link rel="icon" type="image/x-icon" href="../favicon.png" />
 		<title>
-			Finance Automation - Transforming Your Business, One Smart Step at a
-			Time
+			{title}
 		</title>
 
 		<link
